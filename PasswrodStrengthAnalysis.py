@@ -1,5 +1,9 @@
 #A sample password strenght analysis
+
+#Initialise a variable good_password to false
 good_password = False
+
+#Loop until user enters a password of lenght greater than 6, alphanumeric and not numeric  
 while (good_password == False):
     password = input("Enter a password: ")
     if (len(password) < 7):
