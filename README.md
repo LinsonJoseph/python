@@ -24,3 +24,7 @@ C:\Users\User>pip list
 - Install Jupyter Notebook from the command prompt (see section 1.1) with command 'pip install jupyter'. 
 - Once installed use command 'jupyter notebook' to open up the jupyter editor.
 ----------------------------------------------------------------------------------------------------------------------------------------
+1.5 Using Firebase database in Python
+
+To use firebase database, install pyrebase from command prompt, with the following command on command prompt on a Windows system:
+C:\Users\User>pip install firesbase
