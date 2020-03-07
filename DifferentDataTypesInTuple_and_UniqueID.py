@@ -1,0 +1,31 @@
+#playing with various types of sequences
+
+x = (1, 'two', 3.0, [4, 'four'], {5: 'five'}, (6), (6,), (7,'Eight'))
+print("In program x is declared as: x = (1, 'two', 3.0, [4, 'four'], {5: 'five'}, (6), (6,), (7,'Eight'))<---")
+print(f'When x is printed it is    : x = {x}')
+print("x is of type ", type(x))
+print("x[0] of x is: ", type(x[0]))
+print("x[1] of x is: ", type(x[1]))
+print("x[2] of x is: ", type(x[2]))
+print("x[3] of x is: ", type(x[3]))
+print("x[4] of x is: ", type(x[4]))
+print("x[5] of x is: ", type(x[5]))
+print("x[6] of x is: ", type(x[6]))
+print("x[7] of x is: ", type(x[7]))
+
+print('\ny is declared same as x')
+y = (1, 'two', 3.0, [4, 'four'], {5: 'five'}, (6), (6,), (7,'Eight'))
+z = [1, 'two', 3.0, [4, 'four'], {5: 'five'}, (6), (6,), (7,'Eight')]
+print('           *                 *')
+print("In program x is declared as tuple: x = (1, 'two', 3.0, [4, 'four'], {5: 'five'}, (6), (6,), (7,'Eight'))<---")
+print("In program y is declared as tuple: y = (1, 'two', 3.0, [4, 'four'], {5: 'five'}, (6), (6,), (7,'Eight'))<---")
+print('           *                 *')
+print("In program z is declared as list:  z = [1, 'two', 3.0, [4, 'four'], {5: 'five'}, (6), (6,), (7,'Eight')]<---")
+print("x is of type ", type(x))
+print("y is of type ", type(y))
+print("z is of type ", type(z))
+
+print()
+print("Unique ID of x is: ", id(x), "; Unique ID of x[0] is: ", id(x[0]))
+print("Unique ID of y is: ", id(y), "; Unique ID of y[0] is: ", id(y[0]))
+print("Unique ID of z is: ", id(z), "; Unique ID of z[0] is: ", id(z[0]))
