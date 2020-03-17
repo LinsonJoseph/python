@@ -1,0 +1,27 @@
+mylist = ['cheerio', 'pip pip', 'smashing']
+
+mylist.append('cheeky')
+mylist.append("yonks")
+print(mylist[3:5])
+#['cheeky', 'yonks']
+
+mylist += ['cheers', 'hiya', 'watcha']
+print(mylist)
+#['cheerio', 'pip pip', 'smashing', 'cheeky', 'yonks', 'cheers', 'hiya', 'watcha']
+
+mylist += ['ch', 'hi', 'wa']
+print(mylist)
+#['cheerio', 'pip pip', 'smashing', 'cheeky', 'yonks', 'cheers', 'hiya', 'watcha', 'ch', 'hi', 'wa']
+
+mylist.remove('ch')
+print(mylist)
+#['cheerio', 'pip pip', 'smashing', 'cheeky', 'yonks', 'cheers', 'hiya', 'watcha', 'hi', 'wa']
+
+del mylist[3]
+print(mylist)
+#['cheerio', 'pip pip', 'smashing', 'yonks', 'cheers', 'hiya', 'watcha', 'hi', 'wa']
+
+mylist.append('cheeky')
+del mylist[7:9]
+print(mylist)
+#['cheerio', 'pip pip', 'smashing', 'yonks', 'cheers', 'hiya', 'watcha', 'cheeky']
