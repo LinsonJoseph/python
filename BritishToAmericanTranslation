@@ -1,0 +1,62 @@
+british_slangs = ['cheerio', 'pip pip', 'smashing', 'yonks', 'knackered', 'mate']
+american_slangs = ['goodbye', 'goodbye', 'terrific', 'ages', 'tired']
+
+b2aSlangsDictionary = {'cheerio': 'goodbye', 'pip pip': 'goodbye', 'smashing': 'terrific', 'yonks': 'ages', 'knackered': 'tired', 'mate': 'buddy'}
+
+print(f"Brits, if you are talking to an American and have mentioned 'pip pip', do tell him that you meant '{b2aSlangsDictionary['pip pip']}'")
+
+print(b2aSlangsDictionary)
+
+#Adding dictionary item
+b2aSlangsDictionary['rubbish'] = 'trash'
+print(b2aSlangsDictionary)
+
+#Updating dictionary item
+b2aSlangsDictionary['smashing'] = 'awesome'
+print(b2aSlangsDictionary)
+
+
+#Updating dictionary item
+#b2aSlangsDictionary['smashing'] = ['terrific', 'awesome']
+b2aSlangsDictionary['smashing'] = 'terrific'
+print(b2aSlangsDictionary)
+
+#Adding dictionary item
+b2aSlangsDictionary['trunk'] = 'box'
+print(b2aSlangsDictionary)
+
+
+#Deleting dictionary item
+del b2aSlangsDictionary['trunk'] 
+print(b2aSlangsDictionary)
+
+getTrunk = b2aSlangsDictionary.get('trunk')
+if getTrunk:
+    print(f"Trunk is {getTrunk}!")
+else:
+    print("Google for Trunk")
+
+sentence = input(f"Make a sentence with british slangs: {british_slangs}:\n")
+#You look smashing mate, do not get knackered with yonks of flip-flops. Take care cheerio.
+
+if sentence:
+    #sentence_words = []
+    sentence_words = sentence.split(' ')
+    print(sentence_words)
+    i = 0
+    for word in sentence_words:
+        if b2aSlangsDictionary.get(word):
+            sentence_words[i] = b2aSlangsDictionary[word]
+        elif b2aSlangsDictionary.get(word[:-1]):
+            punctuation = word[-1]
+            word = word[:-1]
+            sentence_words[i] = b2aSlangsDictionary[word] + punctuation
+        i += 1
+    print(sentence_words)
+
+translation = ''    
+for word in sentence_words:
+    translation += (str(word) + ' ')
+print()
+print(f'Your sentence.....: {sentence}') 
+print(f'System translation: {translation}')
