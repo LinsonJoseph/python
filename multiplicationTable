@@ -1,0 +1,12 @@
+repeat = 'y'
+number = 'x'
+
+while(repeat in ['y', 'Y', 'yes', 'YES', 'Yes', 'ya', 'Ya', 'YA']):
+    while(not number.isnumeric()): 
+        number = input("Input a NUMBER of which you want to see the multiplication-table: ")
+       
+    for i in range(1,21):
+        print(f"{number}  X  {i}  =  {int(number) * i}")
+
+    number = 'x'
+    repeat = input("\nDo you want to continue: ")
