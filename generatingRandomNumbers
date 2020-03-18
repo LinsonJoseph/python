@@ -1,0 +1,21 @@
+import random
+
+#genrate random numbers between 0.0 and 1.0
+print("\nA random number between 0.0 and 1.0")
+random_decimal = random.random()
+print(random_decimal)
+
+#pick random values from a list 
+print("\nRandom names from a list of employees")
+employee = ['Arun', 'Bhaskar', 'Charan', 'Divya', 'Eric', 'Fajar', 'Grace', 'Hamid', 'Indrajeet', 'Jaspal', 'Kaushik', 'Lingaraj', 'Masu', 'Noah', 'Oswal', 'Pellpop', 'Qerra', 'Rogger', 'Stanley', 'Tansen', 'Umer', 'Verona', 'Washner', 'Xen', 'Yeshu', '']
+print(random.choice(employee))
+
+#random numbers between a desired range
+print("\nRandom numbers between 1, 1000")
+random_integer = random.randint(1, 1000)
+print(random_integer)
+
+#printing ten random numbers
+print("\nPrinting ten random numbers between 1000 and 10000...")
+for i in range(10):
+    print(random.randint(1000,10000))
