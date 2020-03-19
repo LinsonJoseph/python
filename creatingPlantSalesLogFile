@@ -1,0 +1,6 @@
+plantSales_log = open('plant_orders.txt', 'w')
+
+plantSales_log.write('Indian Garden Plants\n')
+plantSales_log.write('Sales Log')
+
+plantSales_log.close()
