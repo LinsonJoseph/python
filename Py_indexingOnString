@@ -1,0 +1,10 @@
+teacher = 'Marykutty'
+try:
+    print(teacher[4,10])
+except TypeError as err:
+    print(f"Indexing on string '{teacher}'")
+    print("Error encountered: ", err)
+    print("Syntax of indexing operation teacher[4,10] is incorrect. \nReplacing ',' with ':'...")
+    teacher = teacher[0: 4] + ' ' + teacher[4: 10].capitalize()
+    print(teacher)
+    print(f"System has split the name, capitalized and added a '{teacher[4]}'")
