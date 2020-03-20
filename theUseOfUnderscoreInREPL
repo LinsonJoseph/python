@@ -1,0 +1,11 @@
+>>> """ this is
+a multiline
+string"""
+' this is\na multiline\nstring'
+>>> _ + ' - Looks BAD?'
+' this is\na multiline\nstring - Looks BAD?'
+>>> print(_.replace('BAD?', 'GOOD NOW!'), sep = '')
+ this is
+a multiline
+string - Looks GOOD NOW!
+>>> 
