@@ -1,0 +1,39 @@
+directory = {'Jonah': 9829272765, 'Benjamin': 7313247889}
+print("Initial Directory: \n", directory)
+
+print("\nBenjamin's number :", directory['Benjamin'])
+#print(directory[0].key() + ' ' +  directory[0].value())
+
+print("\nCase of key names matter")
+try:
+    print(directory['benjamin'])
+except KeyError as err:
+    print(f"{err} not found in directory")
+
+print("\nEvaluate and update Benjamin's number to Jonah's number\n They now share the same number")
+directory['Benjamin'] = directory['Jonah']
+print(directory)
+
+print("\nJonah get's Benjamin's old number re-issued and makes it his own")
+directory['Jonah'] = 7313247889
+print(directory)
+
+print("\nAdd Abraham, the father of Jonah and Benjamin")
+directory['Abraham'] = +91471265467
+print(directory)
+
+print("\nAdd Annie, mother of Jonah and Benjamin and Rachel and Dorthy their daughter-in-laws")
+directory.update({"Annie": 9471265467, 'Rachel': 987654321, '''Dorthy''': 123456789}) 
+print(directory)
+
+print("\nPrint names in Directory")
+for names in directory:
+    print(names)
+
+print("\nPrint numbers in Directory")
+for names in directory:
+    print(directory[names])
+
+print("\nPrint name and numbers in Directory")
+for names in directory:
+    print(f"{names} : {directory[names]})")
