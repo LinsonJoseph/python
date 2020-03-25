@@ -1,0 +1,10 @@
+from urllib.request import urlopen
+
+text = urlopen('https://www.w3.org/TR/PNG/iso_8859-1.txt')
+text_words = []
+for line in text:
+    line_words = line.decode('utf8').split()
+    for word in line_words:
+        text_words.append(word)
+
+print(story_words)
