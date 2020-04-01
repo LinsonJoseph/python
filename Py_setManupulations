@@ -1,0 +1,111 @@
+from colorama import Fore, Back, Style
+
+KJV_1_Thessalonians_5_11 = 'Wherefore comfort yourselves together, and edify one another, even as also ye do.'
+NIV_1_Thessalonians_5_11 = 'Therefore encourage one another and build each other up, just as in fact you are doing.'
+ESV_1_Thessalonians_5_11 = 'Therefore encourage one another and build one another up, just as you are doing.'
+a_sentense = "build up, another just as you are doing."
+b_sentense = "build up another, just as you are doing."
+c_sentense = "build up, another just you are doing."
+a_subset_words = set(a_sentense.split())
+b_subset_words = set(b_sentense.split())
+c_subset_words = set(c_sentense.split())
+
+
+KJV_Isaiah_40_31 = '''But they that wait upon the Lord
+shall renew their strength;
+they shall mount up with wings as eagles;
+they shall run, and not be weary;
+and they shall walk, and not faint.'''
+NIV_Isaiah_40_31 = '''But those who hope in the Lord
+will renew their strength.
+They will soar on wings like eagles;
+they will run and not grow weary,
+they will walk and not be faint.'''
+ESV_Isaiah_40_31 = '''But they who wait for the Lord
+shall renew their strength;
+they shall mount up with wings like eagles;
+they shall run and not be weary;
+they shall walk and not faint.'''
+
+def splitAndConvertToSet(verse):
+    set_verse = set(verse.split())
+    return set_verse
+
+Set_KJV_1_Thessalonians_5_11 = splitAndConvertToSet(KJV_1_Thessalonians_5_11)
+
+Set_NIV_1_Thessalonians_5_11 = splitAndConvertToSet(NIV_1_Thessalonians_5_11)
+
+Set_ESV_1_Thessalonians_5_11 = splitAndConvertToSet(ESV_1_Thessalonians_5_11)
+
+
+print(f"{Back.MAGENTA}{Fore.YELLOW}Union of words in verses{' '*82}")
+print(f"{'-'*106}")
+print(f"{Back.BLACK}{Fore.CYAN}KJV Verse: {KJV_1_Thessalonians_5_11}{' '*(95-len(KJV_1_Thessalonians_5_11))}")
+print(f"{Back.BLACK}{Fore.CYAN}NIV Verse: {NIV_1_Thessalonians_5_11}{' '*(95-len(NIV_1_Thessalonians_5_11))}")
+print(f"{Back.BLACK}{Fore.CYAN}ESV Verse: {ESV_1_Thessalonians_5_11}{' '*(95-len(ESV_1_Thessalonians_5_11))}")
+print(f"{Back.BLUE}{Fore.WHITE}All words in verse in KJV, NIV & ESV versions{' '*61}")
+print(f"{Back.BLACK}{Fore.CYAN}{Set_KJV_1_Thessalonians_5_11.union(Set_NIV_1_Thessalonians_5_11, Set_ESV_1_Thessalonians_5_11)}\n\n")
+
+print(f"{Back.MAGENTA}{Fore.YELLOW}Intersection of words in verses{' '*75}")
+print(f"{'-'*106}")
+print(f"{Back.BLACK}{Fore.CYAN}KJV Verse: {KJV_1_Thessalonians_5_11}{' '*(95-len(KJV_1_Thessalonians_5_11))}")
+print(f"{Back.BLACK}{Fore.CYAN}NIV Verse: {NIV_1_Thessalonians_5_11}{' '*(95-len(NIV_1_Thessalonians_5_11))}")
+print(f"{Back.BLUE}{Fore.WHITE}Common words in KJV and NIV{' '*79}")
+print(f"{Back.BLACK}{Fore.CYAN}{Set_KJV_1_Thessalonians_5_11.intersection(Set_NIV_1_Thessalonians_5_11)}{' '*86}\n\n")
+
+print(f"{Back.MAGENTA}{Fore.YELLOW}Non-intersecting words in KJV{' '*77}")
+print(f"{'-'*106}")
+print(f"{Back.BLACK}{Fore.CYAN}KJV Verse: {KJV_1_Thessalonians_5_11}{' '*(95-len(KJV_1_Thessalonians_5_11))}")
+print(f"{Back.BLACK}{Fore.CYAN}NIV Verse: {NIV_1_Thessalonians_5_11}{' '*(95-len(NIV_1_Thessalonians_5_11))}")
+print(f"{Back.BLUE}{Fore.WHITE}Non-common words in KJV{' '*83}")
+print(f"{Back.BLACK}{Fore.CYAN}{Set_KJV_1_Thessalonians_5_11.difference(Set_NIV_1_Thessalonians_5_11)}{' '*5}\n\n")
+
+print(f"{Back.MAGENTA}{Fore.YELLOW}Non-intersecting words in NIV{' '*77}")
+print(f"{'-'*106}")
+print(f"{Back.BLACK}{Fore.CYAN}KJV Verse: {KJV_1_Thessalonians_5_11}{' '*(95-len(KJV_1_Thessalonians_5_11))}")
+print(f"{Back.BLACK}{Fore.CYAN}NIV Verse: {NIV_1_Thessalonians_5_11}{' '*(95-len(NIV_1_Thessalonians_5_11))}")
+print(f"{Back.BLUE}{Fore.WHITE}Non-common words in NIV{' '*83}")
+print(f"{Back.BLACK}{Fore.CYAN}{Set_NIV_1_Thessalonians_5_11.difference(Set_KJV_1_Thessalonians_5_11)}\n\n")
+
+print(f"{Back.MAGENTA}{Fore.YELLOW}Non-intersecting words in verses{' '*74}")
+print(f"{'-'*106}")
+print(f"{Back.BLACK}{Fore.CYAN}KJV Verse: {KJV_1_Thessalonians_5_11}{' '*(95-len(KJV_1_Thessalonians_5_11))}")
+print(f"{Back.BLACK}{Fore.CYAN}NIV Verse: {NIV_1_Thessalonians_5_11}{' '*(95-len(NIV_1_Thessalonians_5_11))}")
+print(f"{Back.BLUE}{Fore.WHITE}Non-common words in KJV and NIV{' '*75}")
+print(f"{Back.BLACK}{Fore.CYAN}{Set_KJV_1_Thessalonians_5_11.symmetric_difference(Set_NIV_1_Thessalonians_5_11)}\n\n")
+
+
+print(f"{Back.MAGENTA}{Fore.YELLOW}Subset of verses or not {' '*74}")
+print(f"{'-'*98}")
+print(f"{Back.BLACK}{Fore.CYAN}KJV Verse: {ESV_1_Thessalonians_5_11}{' '*(87-len(ESV_1_Thessalonians_5_11))}")
+print(f"{Back.BLACK}{Fore.CYAN}aSentense: {a_sentense}{' '*(87-len(a_sentense))}")
+print(f"{Back.BLUE}{Fore.WHITE}Subset or not{' '*85}")
+print(f"{Back.BLACK}{Fore.CYAN}{a_subset_words.issubset(Set_ESV_1_Thessalonians_5_11)}{' '*94}\n\n")
+
+print(f"{Back.MAGENTA}{Fore.YELLOW}Subset of verses or not {' '*74}")
+print(f"{'-'*98}")
+print(f"{Back.BLACK}{Fore.CYAN}KJV Verse: {ESV_1_Thessalonians_5_11}{' '*(87-len(ESV_1_Thessalonians_5_11))}")
+print(f"{Back.BLACK}{Fore.CYAN}bSentense: {b_sentense}{' '*(87-len(b_sentense))}")
+print(f"{Back.BLUE}{Fore.WHITE}Subset or not{' '*85}")
+print(f"{Back.BLACK}{Fore.RED}{b_subset_words.issubset(Set_ESV_1_Thessalonians_5_11)}{' '*93}\n\n")
+
+print(f"{Back.MAGENTA}{Fore.YELLOW}Verse is superset of sentense or not {' '*74}")
+print(f"{'-'*104}")
+print(f"{Back.BLACK}{Fore.CYAN}KJV Verse: {ESV_1_Thessalonians_5_11}{' '*(87-len(ESV_1_Thessalonians_5_11))}")
+print(f"{Back.BLACK}{Fore.CYAN}aSentense: {a_sentense}{' '*(81-len(a_sentense))}")
+print(f"{Back.BLUE}{Fore.WHITE}Verse superset or not{' '*65}")
+print(f"{Back.BLACK}{Fore.CYAN}{Set_ESV_1_Thessalonians_5_11.issuperset(a_subset_words)}{' '*74}\n\n")
+
+print(f"{Back.MAGENTA}{Fore.YELLOW}Verse is superset of sentense or not {' '*74}")
+print(f"{'-'*104}")
+print(f"{Back.BLACK}{Fore.CYAN}KJV Verse: {KJV_1_Thessalonians_5_11}{' '*(87-len(KJV_1_Thessalonians_5_11))}")
+print(f"{Back.BLACK}{Fore.CYAN}aSentense: {a_sentense}{' '*(81-len(a_sentense))}")
+print(f"{Back.BLUE}{Fore.WHITE}Verse superset or not{' '*65}")
+print(f"{Back.BLACK}{Fore.CYAN}{Set_KJV_1_Thessalonians_5_11.isdisjoint(a_subset_words)}{' '*74}\n\n")
+
+print(f"{Back.MAGENTA}{Fore.YELLOW}Verse disjoint of sentense or not {' '*74}")
+print(f"{'-'*104}")
+print(f"{Back.BLACK}{Fore.CYAN}KJV Verse: {KJV_1_Thessalonians_5_11}{' '*(87-len(KJV_1_Thessalonians_5_11))}")
+print(f"{Back.BLACK}{Fore.CYAN}cSentense: {c_sentense}{' '*(81-len(c_sentense))}")
+print(f"{Back.BLUE}{Fore.WHITE}Verse disjoint or not{' '*65}")
+print(f"{Back.BLACK}{Fore.CYAN}{Set_KJV_1_Thessalonians_5_11.isdisjoint(c_subset_words)}{' '*74}\n\n")
