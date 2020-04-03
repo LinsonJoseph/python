@@ -54,17 +54,3 @@ list2.extend(dic9.values())
 for x in range(0, len(list1)):
     merge_dict.update({list1[x]:list2[x]})
 print(merge_dict)
-
-'''
-myDictList = [dic4, dic5, dic6, dic7, dic8, dic9]
-print("Merged dic: ", myDictList)
-print(type(myDictList))
-
-dict(myDictList)
-print(type(myDictList))
-'''
-
-
-
-
-
